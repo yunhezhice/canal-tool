@@ -208,7 +208,7 @@
 
     <div class="wechat-box">
       <div class="wx-title">🎁 想要完整《运河物流方案》？</div>
-      <div class="wx-id">微信：YOUR_WECHAT_ID</div>
+      <div class="wx-id">微信：87505022</div>
       <div class="wx-tip">加微信备注"运河方案"，获取含路线规划+政策红利+时效预估的定制版（免费）</div>
     </div>
 
@@ -283,7 +283,6 @@ function calc() {
 function round2(n){ return Math.round(n*100)/100; }
 
 function genReport() {
-  const cargoEl = document.getElementById('cargo');
   const o = document.getElementById('origin').value;
   const d = document.getElementById('dest').value;
   const save = document.getElementById('savePerTon').textContent;
@@ -304,7 +303,7 @@ function exportTxt() {
   const d = document.getElementById('dest').value;
   const lines = [
     "====== 平陆运河物流测算结果 ======",
-    "来源：运河智策",
+    "来源：运河智策（微信：87505022）",
     `起运地：${o}`,
     `目的地：${d}`,
     `运河路径：${document.getElementById('canalDist').textContent} km`,
@@ -316,7 +315,7 @@ function exportTxt() {
     `降本幅度：${document.getElementById('rate').textContent}%`,
     "==============================",
     "注：数据为公开信息估算，最终以官方运营数据为准。",
-    "完整方案请联系微信 YOUR_WECHAT_ID"
+    "完整方案请联系微信 87505022"
   ];
   const blob = new Blob([lines.join("\n")], { type:'text/plain;charset=utf-8' });
   const a = document.createElement('a');
